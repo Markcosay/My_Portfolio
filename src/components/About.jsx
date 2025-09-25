@@ -80,7 +80,7 @@ const About = () => {
   transition={{ duration: 0.3 }}
 >
   <img
-    src="src/images/photo.jpg" // your image path
+    src="https://github.com/Markcosay/My_Portfolio/blob/main/src/images/photo.jpg" // your image path
     alt="Profile"
     className="w-full h-full object-cover"
   />
