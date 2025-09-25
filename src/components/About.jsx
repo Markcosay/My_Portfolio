@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { FaCode, FaLaptopCode, FaBrain } from 'react-icons/fa'
+import photo from '../images/photo.jpg'; 
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -80,7 +81,7 @@ const About = () => {
   transition={{ duration: 0.3 }}
 >
   <img
-    src="https://github.com/Markcosay/My_Portfolio/blob/main/src/images/photo.jpg" // your image path
+    src={photo}
     alt="Profile"
     className="w-full h-full object-cover"
   />
