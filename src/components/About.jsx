@@ -166,7 +166,7 @@ const About = () => {
               className="grid grid-cols-3 gap-6 pt-8"
             >
               {[
-                { number: '6+', label: 'Years Experience' },
+                { number: '6+', label: 'Months Experience' },
                 { number: '20+', label: 'Projects Completed' },
                 { number: '100%', label: 'Client Satisfaction' },
               ].map((stat, index) => (

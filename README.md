@@ -5,7 +5,7 @@ Welcome to the repository for my personal portfolio website, built with **React*
 ## 🌐 Live Demo
 
 You can view the live version of the website here:
-[https://markcosay.github.io/portfolio-tanay](https://markcosay.github.io/My_Portfolio)
+[https://markcosay.github.io/My_Portfolio](https://markcosay.github.io/My_Portfolio)
 
 ---
 
