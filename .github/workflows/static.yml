@@ -1,5 +1,5 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Simple workflow for deploying React app to GitHub Pages
+name: Deploy React app to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -22,22 +22,28 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Single deploy job since we're just deploying
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          # Upload entire repository
-          path: '.'
+          node-version: '16'  # Specify the Node.js version your app uses
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build React app
+        run: npm run build  # Builds the React app
+
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: jamesives/github-pages-deploy-action@v4.1.0
+        with:
+          branch: gh-pages  # The branch to deploy to (GitHub Pages uses `gh-pages`)
+          folder: build  # The folder containing the built React app
